@@ -1,0 +1,27 @@
+
+$TTL 604800
+@       IN 				SOA  ocp4svc01.ngplab.lan. root (
+                                        20230905      ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+
+
+        IN      NS  nocp4svc01.ngplab.ocp4.lan.
+; Service machine
+1.1.168.192.in-addr.arpa.       IN      PTR             ocp4svc01.ngplab.lan.
+1.1.168.192.in-addr.arpa.       IN      PTR             api.ngplab.lan.
+1.1.168.192.in-addr.arpa.       IN      PTR             api-int.ngplab.lan.
+
+; Temp BootStrap
+100.1.168.192.in-addr.arpa.     IN      PTR             bootstrap01.ngplab.lan.
+
+; Master Nodes
+10.1.168.192.in-addr.arpa.       IN     PTR             master01.ngplab.lan.
+11.1.168.192.in-addr.arpa.       IN     PTR             master02.ngplab.lan.
+12.1.168.192.in-addr.arpa.       IN     PTR             master03.ngplab.lan.
+
+; Worker Nodes
+20.1.168.192.in-addr.arpa.       IN     PTR             worker01.ngplab.lan.
+21.1.168.192.in-addr.arpa.       IN     PTR             worker02.ngplab.lan.
