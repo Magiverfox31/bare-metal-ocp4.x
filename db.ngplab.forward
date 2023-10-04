@@ -1,40 +1,25 @@
 $TTL 604800
-@       IN      SOA  ocp4svc01.ngplab.lan. root (
-                                        20230910      ; serial
+@       IN         SOA  ocp4svc01.ocp4.lan. root (
+                                        202309106 ; serial
                                         1D      ; refresh
                                         1H      ; retry
                                         1W      ; expire
                                         3H      ; minimum
 )
-        IN      NS      ocp4svc01.ngplab.lan.
-
+        IN      NS      ocp4svc01.ocp4.lan.
 ; Service Node
-ocp4svc01.ngplab.lan.        IN      A       192.168.1.1
-
+ocp4svc01.ocp4.lan.        IN      A       192.168.1.1
+ocp4svc01.ngplab.ocp4.lan. IN      A       192.168.1.1
 ; temp BootStrap
-
-bootstrap01.ngplab.lan   IN      A       192.168.1.100
-
+bootstrap01.ngplab.ocp4.lan.   IN      A       192.168.1.100
 ; Control Plane Servers
-
-master01.ngplab.lan.         IN      A       192.168.1.10
-master02.ngplab.lan.         IN      A       192.168.1.11
-master03.ngplab.lan.         IN      A       192.168.1.12
-
+master01.ngplab.ocp4.lan.         IN      A       192.168.1.10
+master02.ngplab.ocp4.lan.         IN      A       192.168.1.11
+master03.ngplab.ocp4.lan.         IN      A       192.168.1.12
 ; Worker Servers
-
-worker01.ngplab.lan.         IN      A       192.168.1.20
-worker02.ngplab.lan.         IN      A       192.168.1.21
-
+worker01.ngplab.ocp4.lan.         IN      A       192.168.1.20
+worker02.ngplab.ocp4.lan.         IN      A       192.168.1.21
 ; OpenShift Internal - Load balancer
-api.ngplab.lan.        IN    A    192.168.1.1
-api-int.ngplab.lan.    IN    A    192.168.1.1
-*.apps.ngplab.lan.     IN    A    192.168.1.1
-
-; ETCD Cluster
-etcd-0.ngplab.lan.    IN    A     192.168.1.10
-etcd-1.ngplab.lan.    IN    A     192.168.1.11
-etcd-2.ngplab.lan.    IN    A     192.168.1.12
-
-oauth-openshift.apps.ngplab.lan.               IN     A     192.168.1.1
-console-openshift-console.apps.ngplab.lan.     IN     A     192.168.1.1
+api.ngplab.ocp4.lan.        IN    A    192.168.1.1
+api-int.ngplab.ocp4.lan.    IN    A    192.168.1.1
+*.apps.ngplab.ocp4.lan.     IN    A    192.168.1.1
