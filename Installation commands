@@ -1,0 +1,22 @@
+## Installation commands ##
+
+# Generate manifests and ignition files #
+# ~/openshift-install create manifests --dir ~/ocp-install/
+# ~/openshift-install create ignition-configs --dir ~/ocp-install/
+
+## move the new created files to /var/www/html/ocp4/
+# mv ~/ocp-install/* /var/www/html/ocp4/
+
+## change files ownership to APACHE user and permissions to 755
+
+#  chown -R apache: /var/www/html/ocp4/
+#  chmod 755 /var/www/html/ocp4/
+
+## install Bootstrap machine, master, and worker nodes ##
+# sudo coreos-installer install /dev/sda -u http://192.168.22.1:8080/ocp4/rhcos.gz -I http://192.168.1.1:8080/ocp4/bootstrap.ign --insecure --insecure-ignition
+# sudo coreos-installer install /dev/sda -u http://192.168.22.1:8080/ocp4/rhcos.gz -I http://192.168.1.1:8080/ocp4/master.ign --insecure --insecure-ignition
+# sudo coreos-installer install /dev/sda -u http://192.168.22.1:8080/ocp4/rhcos.gz -I http://192.168.1.1:8080/ocp4/worker.ign --insecure --insecure-ignition
+
+## Monitor Bootstrap installation ##
+
+# ~/openshift-install --dir ~/ocp-install wait-for bootstrap-complete --log-level=debug
