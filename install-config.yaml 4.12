@@ -4,25 +4,25 @@ proxy:
   httpProxy: http://10.92.0.51:8080
   httpsProxy: http://10.92.0.51:8080
   noProxy: ocp4.lan,192.168.1.0/24
-compute: 
-- hyperthreading: Enabled 
+compute:
+- hyperthreading: Enabled
   name: worker
-  replicas: 0 
-controlPlane: 
-  hyperthreading: Enabled 
+  replicas: 0
+controlPlane:
+  hyperthreading: Enabled
   name: master
-  replicas: 3 
+  replicas: 3
 metadata:
-  name: ngplab # Cluster-Name
+  name: ngplab
 networking:
   clusterNetwork:
-  - cidr: 10.128.0.0/14 
-    hostPrefix: 23 
-  networkType: OVNKubernetes 
-  serviceNetwork: 
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  networkType: OVNKubernetes
+  serviceNetwork:
   - 172.30.0.0/16
 platform:
-  none: {} 
-fips: false 
-pullSecret: '' 
-sshKey: '' 
+  none: {}
+fips: false
+pullSecret: ''
+sshKey: ''
