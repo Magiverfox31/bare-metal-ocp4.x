@@ -1,5 +1,9 @@
 iVersion: v1
-baseDomain: example.com 
+baseDomain: ocp4.lan
+proxy:
+  httpProxy: http://10.92.0.51:8080
+  httpsProxy: http://10.92.0.51:8080
+  noProxy: ocp4.lan,192.168.1.0/24
 compute: 
 - hyperthreading: Enabled 
   name: worker
@@ -9,7 +13,7 @@ controlPlane:
   name: master
   replicas: 3 
 metadata:
-  name: test 
+  name: ngplab # Cluster-Name
 networking:
   clusterNetwork:
   - cidr: 10.128.0.0/14 
@@ -20,5 +24,5 @@ networking:
 platform:
   none: {} 
 fips: false 
-pullSecret: '{"auths": ...}' 
-sshKey: 'ssh-ed25519 AAAA...' 
+pullSecret: '' 
+sshKey: '' 
