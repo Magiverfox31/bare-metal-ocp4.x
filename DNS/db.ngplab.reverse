@@ -1,6 +1,6 @@
 $TTL 604800
 @       IN     SOA  ocp4svc01.ocp4.lan. root (
-                                        20231002 ; serial
+                                        20231001 ; serial
                                         1D      ; refresh
                                         1H      ; retry
                                         1W      ; expire
@@ -9,16 +9,16 @@ $TTL 604800
 
         IN      NS  nocp4svc01.ocp4.lan.
 ; Service machine
-1.1.168.192.in-addr.arpa.       IN      PTR             ocp4svc01.ocp4.lan.
-1.1.168.192.in-addr.arpa.       IN      PTR             ocp4svc01.ngplab.ocp4.lan.
-1.1.168.192.in-addr.arpa.       IN      PTR             api.ngplab.ocp4.lan.
-1.1.168.192.in-addr.arpa.       IN      PTR             api-int.ngplab.ocp4.lan.
+1.22.168.192.in-addr.arpa.       IN      PTR             ocp4svc01.ocp4.lan.
+1.22.168.192.in-addr.arpa.       IN      PTR             ocp4svc01.ngplab.ocp4.lan.
+1.22.168.192.in-addr.arpa.       IN      PTR             api.ngplab.ocp4.lan.
+1.22.168.192.in-addr.arpa.       IN      PTR             api-int.ngplab.ocp4.lan.
 ; Temp BootStrap
 100.1.168.192.in-addr.arpa.     IN      PTR             bootstrap01.ngplab.ocp4.lan.
 ; Master Nodes
-10.1.168.192.in-addr.arpa.       IN     PTR             master01.ngplab.ocp4.lan.
-11.1.168.192.in-addr.arpa.       IN     PTR             master02.ngplab.ocp4.lan.
-12.1.168.192.in-addr.arpa.       IN     PTR             master03.ngplab.ocp4.lan.
+10.22.168.192.in-addr.arpa.       IN     PTR             master01.ngplab.ocp4.lan.
+11.22.168.192.in-addr.arpa.       IN     PTR             master02.ngplab.ocp4.lan.
+12.22.168.192.in-addr.arpa.       IN     PTR             master03.ngplab.ocp4.lan.
 ; Worker Nodes
-20.1.168.192.in-addr.arpa.       IN     PTR             worker01.ngplab.ocp4.lan.
-21.1.168.192.in-addr.arpa.       IN     PTR             worker02.ngplab.ocp4.lan.
+20.22.168.192.in-addr.arpa.       IN     PTR             worker01.ngplab.ocp4.lan.
+21.22.168.192.in-addr.arpa.       IN     PTR             worker02.ngplab.ocp4.lan.
