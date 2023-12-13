@@ -19,6 +19,7 @@ master03.ngplab.ocp4.lan.         IN      A       192.168.22.12
 ; Worker Servers
 worker01.ngplab.ocp4.lan.         IN      A       192.168.22.20
 worker02.ngplab.ocp4.lan.         IN      A       192.168.22.21
+worker03.ngplab.ocp4.lan.         IN      A       192.168.22.22
 ; OpenShift Internal - Load balancer
 api.ngplab.ocp4.lan.        IN    A    192.168.22.1
 api-int.ngplab.ocp4.lan.    IN    A    192.168.22.1
